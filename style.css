@@ -1,332 +1,503 @@
+/* General Styling */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+p, ul {
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
 /* Home Section Styling */
 #home {
-    background: linear-gradient(to bottom right, #f8f9fa, #e9ecef);
-    text-align: left;
-    padding: 50px 0;
+  background: linear-gradient(to bottom right, #f8f9fa, #e9ecef);
+  text-align: left;
+  padding: 50px 0;
 }
 
 h1 {
-    font-size: 2.8rem;
-    font-weight: bold;
-    line-height: 1.2;
+  font-size: 2.8rem;
+  font-weight: bold;
+  line-height: 1.2;
 }
 
 h1 .text-primary {
-    color: #007bff;
+  color: #007bff;
 }
 
 p.lead {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    text-align: justify;
-    margin-bottom: 20px;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-align: justify;
+  margin-bottom: 20px;
 }
 
-.btn-primary {
-    background-color: #007bff;
-    border: none;
-    padding: 12px 24px;
-    font-size: 1.1rem;
-    font-weight: 500;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
+#about-image {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  object-fit: cover;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  border-radius: 10px;
 }
 
-.btn-primary:hover {
-    background-color: #0056b3;
+#about-image:hover {
+  transform: scale(1.05);
 }
 
-.rounded-circle {
-    border: 5px solid #fff;
-    transition: transform 0.3s ease;
+/* Work Experience, Education, and Other Sections */
+#work-experience, #education, #research {
+  padding: 50px 0;
 }
 
-.rounded-circle:hover {
-    transform: scale(1.05);
+#work-experience h2, #education h2, #research h2 {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-#home img {
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+.section-heading {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-@media (max-width: 768px) {
-    #home h1 {
-        font-size: 2.4rem;
-    }
-
-    #home p {
-        font-size: 1rem;
-    }
-
-    #home img {
-        width: 200px;
-        height: 200px;
-    }
-}
-
-
-/* General styling */
-body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-  }
-  
-  h1, h2, h3 {
-    font-weight: bold;
-  }
-  
-  header {
-    background-color: #333;
-    color: #fff;
-  }
-  
-  .navbar-brand {
-    font-size: 24px;
-  }
-  
-  section {
-    padding: 60px 0;
-  }
-  
-  #home {
-    background: #f8f9fa;
-    text-align: center;
-    color: #333;
-  }
-  
-  img {
-    border-radius: 8px;
-  }
-  
-  h2 {
-    font-size: 36px;
-    margin-bottom: 40px;
-  }
-  
-  p, ul {
-    font-size: 16px;
-  }
-  
-  ul {
-    list-style: none;
-    padding-left: 0;
-  }
-  
-  ul li {
-    font-size: 16px;
-    margin-bottom: 8px;
-  }
-  
-  .btn-outline-primary {
-    color: #007bff;
-    border-color: #007bff;
-  }
-  
-  .btn-outline-primary:hover {
-    background-color: #007bff;
-    color: #fff;
-  }
-  
-  footer {
-    background-color: #222;
-    color: white;
-  }
-  
-  /* Education Section Styling */
-  #education .row {
-    margin-bottom: 60px;
-  }
-  
-  .img-fluid {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
-  
-  .text-muted {
-    font-size: 18px;
-  }
-  
-  h4 {
-    margin-top: 20px;
-  }
-  
-  /* Research Section - Timeline Styling */
-  .timeline {
-    position: relative;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  
-  .timeline-item {
-    display: flex;
-    margin-bottom: 30px;
-    position: relative;
-  }
-  
-  .timeline-marker {
-    width: 15px;
-    height: 15px;
-    background-color: #007bff;
-    border-radius: 50%;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 0;
-  }
-  
-  .timeline-content {
-    background-color: #f8f9fa;
-    padding: 15px 25px;
-    border-radius: 8px;
-    position: relative;
-    width: calc(50% - 20px);
-  }
-  
-  .timeline-content h3 {
-    margin-top: 0;
-    font-size: 20px;
-    color: #007bff;
-  }
-  
-  .timeline-content .timeline-date {
-    font-size: 14px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #6c757d;
-  }
-  
-  .timeline-item:nth-child(odd) .timeline-content {
-    left: 0;
-  }
-  
-  .timeline-item:nth-child(even) .timeline-content {
-    left: 50%;
-  }
-  
-  .timeline-item:nth-child(odd) .timeline-marker {
-    right: -8px;
-  }
-  
-  .timeline-item:nth-child(even) .timeline-marker {
-    left: -8px;
-  }
-  
-  .timeline-item .btn-outline-primary {
-    margin-top: 15px;
-  }
-  /* Work Experience Section */
-#work-experience .row {
-    margin-bottom: 60px;
-}
-
-.img-fluid {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
+#work-experience h3, #education h3, #research h3 {
+  font-size: 1.8rem;
+  color: #007bff;
 }
 
 .text-muted {
-    font-size: 18px;
-}
-
-h4 {
-    margin-top: 20px;
-}
-
-.btn-outline-primary {
-    color: #007bff;
-    border-color: #007bff;
-}
-
-.btn-outline-primary:hover {
-    background-color: #007bff;
-    color: #fff;
-}
-
-/* Work Experience Specific Styling */
-#work-experience h3 {
-    font-size: 24px;
-    color: #007bff;
-}
-
-#work-experience ul {
-    list-style: disc;
-    padding-left: 20px;
-    text-align: justify; /* Justified alignment for job description */
-}
-
-#work-experience ul li {
-    font-size: 16px;
-    margin-bottom: 10px;
-    line-height: 1.5;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
 .img-fluid {
-    border-radius: 10px;
-}
-/* Home Section Styling */
-#home {
-    background: linear-gradient(to bottom right, #f8f9fa, #e9ecef);
-    text-align: left;
-    padding: 50px 0;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-h1 {
-    font-size: 2.8rem;
-    font-weight: bold;
-    line-height: 1.2;
+/* Responsive Design: Mobile Adjustments */
+@media (max-width: 768px) {
+  h1 {
+      font-size: 2.4rem;
+      text-align: center;
+  }
+
+  p.lead {
+      font-size: 1rem;
+      text-align: justify;
+      margin-bottom: 20px;
+  }
+
+  #about-image {
+      width: 80%;
+      max-width: 250px;
+      margin: 20px auto;
+  }
+
+  #home, #work-experience, #education, #research {
+      padding: 30px 0;
+  }
+
+  h2, h3 {
+      text-align: center;
+      font-size: 1.6rem;
+  }
+
+  .row {
+      flex-direction: column;
+  }
+
+  .col-md-6 {
+      width: 100%;
+      padding: 10px 0;
+      text-align: center;
+  }
+
+  .btn-outline-primary {
+      margin: 20px auto;
+  }
 }
 
-h1 .text-primary {
-    color: #007bff;
-}
-
-p.lead {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    text-align: justify;
-    margin-bottom: 20px;
-}
-
+/* Buttons and Links */
 .btn-primary {
-    background-color: #007bff;
-    border: none;
-    padding: 12px 24px;
-    font-size: 1.1rem;
-    font-weight: 500;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
+  background-color: #007bff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
-/* Image Styling */
-.img-square {
-    border-radius: 0; /* Keep the image square */
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15); /* Add shadow to the image */
-    object-fit: cover; /* Ensures the image maintains the correct aspect ratio */
-    max-height: 400px; /* Keep the image size proportional to the text */
-    transition: transform 0.3s ease;
+.btn-outline-primary {
+  color: #007bff;
+  border-color: #007bff;
 }
 
-.img-square:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
+.btn-outline-primary:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+/* Research Section Timeline Styling */
+/* Research Section Timeline Styling */
+#research {
+  background-color: #f8f9fa;
+  padding: 50px 0;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline-item {
+  display: flex;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.timeline-marker {
+  width: 15px;
+  height: 15px;
+  background-color: #007bff;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+}
+
+.timeline-content {
+  background-color: #ffffff;
+  padding: 15px 25px;
+  border-radius: 8px;
+  position: relative;
+  width: calc(50% - 20px);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+  left: 0;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  left: 50%;
+}
+
+.timeline-item .btn-outline-primary {
+  margin-top: 15px;
+}
+
+/* Abstract card styling */
+.abstract-card {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 45%;
+  z-index: 10;
+  top: 0;
+  width: 45%;
+  right: 0;
+}
+
+.abstract-card.right {
+  left: 55%;
+  transform: translateX(-100%);
+}
+
+.abstract-card.left {
+  right: 55%;
+  transform: translateX(100%);
+}
+
+.abstract-card-content {
+  position: relative;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.abstract-card-content p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.close-abstract {
+  background-color: transparent;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  font-size: 1.2rem;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* Show abstract when active */
+.abstract-card.active {
+  display: block;
 }
 
 @media (max-width: 768px) {
-    #home h1 {
-        font-size: 2.4rem;
-    }
+  .timeline {
+      display: block;
+      margin: 0;
+  }
 
-    #home p {
-        font-size: 1rem;
-    }
+  .timeline-item {
+      display: block;
+      margin-bottom: 40px;
+  }
 
-    #home img {
-        width: 100%;
-        height: auto;
-    }
+  .timeline-marker {
+      left: 20px;
+      top: 20px;
+  }
+
+  .timeline-content {
+      width: 100%;
+      padding-left: 40px;
+  }
+
+  .abstract-card {
+      width: 100%;
+      right: 0;
+      left: 0;
+  }
+}
+
+
+
+
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .timeline {
+      display: block;
+      margin: 0;
+  }
+
+  .timeline-item {
+      display: block;
+      padding-left: 0;
+      margin-bottom: 40px;
+  }
+
+  .timeline-marker {
+      left: 20px;
+      top: 20px;
+      transform: none;
+  }
+
+  .timeline-content {
+      width: 100%;
+      padding-left: 40px;
+      margin-left: 0;
+      box-shadow: none;
+  }
+
+  .timeline-item:nth-child(even) .timeline-content {
+      left: 0;
+  }
+}
+
+/* Skills Section Styling */
+#skills {
+  max-width: 900px; /* Limit the width of the container to control the spacing */
+  margin: 0 auto; /* Center the container */
+  font-family: 'Helvetica Neue', Arial, sans-serif; /* Professional looking font */
+}
+
+#skills h2 {
+  font-size: 2.5rem; /* Adjust the heading size for a cleaner look */
+  font-weight: bold;
+}
+
+#skills h3 {
+  font-size: 1.75rem; /* Reduce the subheading size slightly */
+  font-weight: bold;
+  color: #007bff;
+}
+
+.skills-list p {
+  font-size: 0.95rem; /* Smaller font size for skill details */
+  text-align: justify;
+  line-height: 1.7; /* Increased line height for better readability */
+}
+
+.skills-list .skills-category p {
+  margin-bottom: 10px; /* Reduce space between categories */
+}
+
+.skills-category p strong {
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+  #skills h2 {
+      font-size: 2.25rem; /* Adjust the heading size for smaller screens */
+  }
+
+  #skills h3 {
+      font-size: 1.5rem; /* Adjust the subheading size for smaller screens */
+  }
+
+  .skills-list p {
+      font-size: 0.9rem; /* Slightly smaller font for mobile readability */
+      line-height: 1.6;
+  }
+}
+/* Styling for the abstract card */
+.abstract-card {
+  display: none;
+  position: relative;
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  max-width: 500px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.abstract-card p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.close-abstract {
+  background-color: transparent;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  font-size: 1.2rem;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* Show abstract on button click */
+.abstract-card.active {
+  display: block;
+}
+/* Projects Section Styling */
+#projects {
+  background-color: #f8f9fa;
+  padding: 50px 0;
+}
+
+#projects h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #000;
+}
+
+#projects h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+}
+
+#projects ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+#projects ul li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.project-icon {
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin: 0 auto;
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+}
+
+.project-icon:hover {
+  filter: none;
+}
+
+.btn-outline-primary {
+  border-color: #007bff;
+  color: #007bff;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+/* Ensuring the image and text container have equal heights */
+.edu-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-height: 400px; /* Set max-height as per your need */
+}
+
+/* Ensuring equal height for both the image and text section */
+@media (min-width: 768px) {
+  .row.align-items-center {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .col-md-6 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .edu-image {
+    flex-grow: 1;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .edu-image {
+    max-height: none;
+    width: 100%;
+  }
 }
